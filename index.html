@@ -7,337 +7,66 @@
 
 <style>
 *{box-sizing:border-box}
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f7f5;
-color:#17221d
-}
-
-header{
-background:linear-gradient(135deg,#075b3a,#0b7a4d);
-color:#fff;
-padding:14px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-flex-wrap:wrap;
-box-shadow:0 3px 15px #0002
-}
-
-.logo{
-font-size:22px;
-font-weight:800
-}
-
-nav{
-display:flex;
-gap:4px;
-flex-wrap:wrap
-}
-
-button{
-border:0;
-border-radius:8px;
-padding:10px 13px;
-background:#075b3a;
-color:#fff;
-font-weight:bold;
-cursor:pointer
-}
-
-nav button{
-background:transparent
-}
-
-.wrap{
-max-width:1200px;
-margin:auto;
-padding:24px 5%
-}
-
-.hidden{
-display:none!important
-}
-
-.card{
-background:#fff;
-border-radius:15px;
-padding:20px;
-margin-bottom:18px;
-box-shadow:0 3px 15px #00000010
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin:6px 0 13px;
-border:1px solid #ccd6d0;
-border-radius:8px;
-font-size:15px
-}
-
-textarea{
-min-height:100px
-}
-
-.login-card{
-max-width:430px;
-margin:50px auto
-}
-
-.login-card h1{
-color:#075b3a
-}
-
-.link{
-background:none;
-color:#075b3a;
-padding:4px
-}
-
-.error{
-color:#b42318
-}
-
-.success{
-color:#087443
-}
-
-.hero{
-background:linear-gradient(135deg,#075b3a,#0b7a4d);
-color:#fff;
-border-radius:18px;
-padding:28px;
-margin-bottom:20px
-}
-
-.hero h1{
-margin:0 0 8px
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:16px
-}
-
-.stat{
-background:#fff;
-padding:20px;
-border-radius:15px;
-box-shadow:0 3px 15px #00000010;
-border-top:4px solid #075b3a
-}
-
-.num{
-font-size:30px;
-font-weight:800;
-color:#075b3a;
-margin-top:7px
-}
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px
-}
-
-.quick{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px
-}
-
-.quick div{
-padding:18px;
-text-align:center;
-background:#eef6f1;
-border-radius:12px;
-color:#075b3a;
-font-weight:bold;
-cursor:pointer
-}
-
-.badge{
-display:inline-block;
-padding:5px 9px;
-border-radius:20px;
-background:#dff2e7;
-color:#075b3a;
-font-size:12px;
-font-weight:bold
-}
-
-.admin{
-background:#fff0c2;
-color:#8a5a00
-}
-
-.blue{
-background:#dceeff
-}
-
-table{
-width:100%;
-border-collapse:collapse
-}
-
-th,td{
-padding:10px;
-text-align:left;
-border-bottom:1px solid #e5e9e7
-}
-
-th{
-background:#edf4ef
-}
-
-.action{
-display:flex;
-gap:5px;
-flex-wrap:wrap
-}
-
-.edit{
-background:#2563eb
-}
-
-.delete{
-background:#dc2626
-}
-
-.cancel{
-background:#6b7280
-}
-
-.progress{
-height:10px;
-background:#e7ece9;
-border-radius:20px;
-overflow:hidden
-}
-
-.bar{
-height:100%;
-background:linear-gradient(90deg,#075b3a,#18a66a)
-}
-
-footer{
-background:#075b3a;
-color:#fff;
-padding:25px 5%;
-margin-top:30px
-}
-
-.notice{
-background:#fff8e8;
-border-left:5px solid #d99b00;
-padding:15px;
-border-radius:8px
-}
-
-/* MONEY */
-.money-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-margin:14px 0
-}
-
-.money-box{
-padding:16px;
-border-radius:12px;
-background:#eef6f1;
-border:1px solid #d9e9df
-}
-
-.money-box h3{
-margin:0 0 8px;
-color:#075b3a
-}
-
-.money-value{
-font-size:24px;
-font-weight:800;
-color:#075b3a
-}
-
-.danger{
-color:#b42318!important
-}
-
-.balance-ok{
-color:#087443!important
-}
-
-.currency{
-font-weight:700
-}
-
-.currency-card{
-border-left:5px solid #075b3a
-}
-
-.warning-box{
-background:#fff4e5;
-border:1px solid #f0c36d;
-padding:15px;
-border-radius:10px;
-margin-bottom:15px
-}
-
-.success-box{
-background:#eefaf3;
-border:1px solid #b7dfc5;
-padding:15px;
-border-radius:10px;
-margin-bottom:15px
-}
-
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7f5;color:#17221d}
+header{background:linear-gradient(135deg,#075b3a,#0b7a4d);color:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;box-shadow:0 3px 15px #0002}
+.logo{font-size:22px;font-weight:800}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+button{border:0;border-radius:8px;padding:10px 13px;background:#075b3a;color:#fff;font-weight:bold;cursor:pointer}
+nav button{background:transparent}
+.wrap{max-width:1200px;margin:auto;padding:24px 5%}
+.hidden{display:none!important}
+.card{background:#fff;border-radius:15px;padding:20px;margin-bottom:18px;box-shadow:0 3px 15px #00000010}
+input,select,textarea{width:100%;padding:12px;margin:6px 0 13px;border:1px solid #ccd6d0;border-radius:8px;font-size:15px}
+textarea{min-height:100px}
+.login-card{max-width:430px;margin:50px auto}
+.login-card h1{color:#075b3a}
+.link{background:none;color:#075b3a;padding:4px}
+.error{color:#b42318}
+.success{color:#087443}
+.hero{background:linear-gradient(135deg,#075b3a,#0b7a4d);color:#fff;border-radius:18px;padding:28px;margin-bottom:20px}
+.hero h1{margin:0 0 8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:#fff;padding:20px;border-radius:15px;box-shadow:0 3px 15px #00000010;border-top:4px solid #075b3a}
+.num{font-size:30px;font-weight:800;color:#075b3a;margin-top:7px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.quick{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.quick div{padding:18px;text-align:center;background:#eef6f1;border-radius:12px;color:#075b3a;font-weight:bold;cursor:pointer}
+.badge{display:inline-block;padding:5px 9px;border-radius:20px;background:#dff2e7;color:#075b3a;font-size:12px;font-weight:bold}
+.admin{background:#fff0c2;color:#8a5a00}
+.blue{background:#dceeff}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;text-align:left;border-bottom:1px solid #e5e9e7}
+th{background:#edf4ef}
+.action{display:flex;gap:5px;flex-wrap:wrap}
+.edit{background:#2563eb}
+.delete{background:#dc2626}
+.cancel{background:#6b7280}
+.progress{height:10px;background:#e7ece9;border-radius:20px;overflow:hidden}
+.bar{height:100%;background:linear-gradient(90deg,#075b3a,#18a66a)}
+footer{background:#075b3a;color:#fff;padding:25px 5%;margin-top:30px}
+.notice{background:#fff8e8;border-left:5px solid #d99b00;padding:15px;border-radius:8px}
+.money-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.money-box{padding:16px;border-radius:12px;background:#eef6f1;border:1px solid #d9e9df}
+.money-box h3{margin:0 0 8px;color:#075b3a}
+.money-value{font-size:24px;font-weight:800;color:#075b3a}
+.danger{color:#b42318!important}
+.balance-ok{color:#087443!important}
+.currency{font-weight:700}
+.currency-card{border-left:5px solid #075b3a}
+.warning-box{background:#fff4e5;border:1px solid #f0c36d;padding:15px;border-radius:10px;margin-bottom:15px}
+.success-box{background:#eefaf3;border:1px solid #b7dfc5;padding:15px;border-radius:10px;margin-bottom:15px}
 @media(max-width:900px){
-.stats{
-grid-template-columns:repeat(2,1fr)
+.stats{grid-template-columns:repeat(2,1fr)}
+.grid{grid-template-columns:1fr}
+.money-grid{grid-template-columns:1fr}
 }
-
-.grid{
-grid-template-columns:1fr
-}
-
-.money-grid{
-grid-template-columns:1fr
-}
-}
-
 @media(max-width:600px){
-nav button{
-font-size:11px;
-padding:8px 7px
-}
-
-.stats{
-gap:9px
-}
-
-.stat{
-padding:14px
-}
-
-.num{
-font-size:22px
-}
-
-table{
-display:block;
-overflow-x:auto;
-font-size:12px
-}
-
-.wrap{
-padding:18px 4%
-}
+nav button{font-size:11px;padding:8px 7px}
+.stats{gap:9px}
+.stat{padding:14px}
+.num{font-size:22px}
+table{display:block;overflow-x:auto;font-size:12px}
+.wrap{padding:18px 4%}
 }
 </style>
 </head>
@@ -346,45 +75,19 @@ padding:18px 4%
 
 <header id="header" class="hidden">
 
-<div class="logo">
-GW | GUUL-WADAAG
-</div>
+<div class="logo">GW | GUUL-WADAAG</div>
 
 <nav>
-
-<button onclick="page('home')">
-🏠 Home
-</button>
-
-<button onclick="page('dashboard')">
-📊 Dashboard
-</button>
-
-<button onclick="page('members')">
-👥 Xubnaha
-</button>
-
-<button onclick="page('projects')">
-🏗️ Mashaariic
-</button>
-
-<button id="payNav" class="hidden" onclick="page('payments')">
-💰 Lacagaha
-</button>
-
-<button id="disNav" class="hidden" onclick="page('disbursement')">
-💸 Lacag-bixin
-</button>
-
-<button onclick="page('news')">
-📰 Warar
-</button>
-
-<button onclick="logout()">
-🚪 Ka bax
-</button>
-
+<button onclick="page('home')">🏠 Home</button>
+<button onclick="page('dashboard')">📊 Dashboard</button>
+<button onclick="page('members')">👥 Xubnaha</button>
+<button onclick="page('projects')">🏗️ Mashaariic</button>
+<button id="payNav" class="hidden" onclick="page('payments')">💰 Lacagaha</button>
+<button id="disNav" class="hidden" onclick="page('disbursement')">💸 Lacag-bixin</button>
+<button onclick="page('news')">📰 Warar</button>
+<button onclick="logout()">🚪 Ka bax</button>
 </nav>
+
 </header>
 
 
@@ -398,54 +101,27 @@ GW | GUUL-WADAAG
 
 <h1>🔐 GUUL-WADAAG</h1>
 
-<p>
-Official Community Portal
-</p>
+<p>Official Community Portal</p>
 
 <label>Email</label>
 
-<input
-id="le"
-type="email"
-placeholder="Email-kaaga"
->
+<input id="le" type="email" placeholder="Email-kaaga">
 
 <label>Password</label>
 
-<input
-id="lp"
-type="password"
-placeholder="Password-kaaga"
->
+<input id="lp" type="password" placeholder="Password-kaaga">
 
-<button
-style="width:100%"
-onclick="login()"
->
-Gal
-</button>
+<button style="width:100%" onclick="login()">Gal</button>
 
 <p id="lm" class="error"></p>
 
-<button
-class="link"
-onclick="showForgot()"
->
-Forgot Password?
-</button>
+<button class="link" onclick="showForgot()">Forgot Password?</button>
 
 <hr>
 
 <p>
 Account ma lihid?
-
-<button
-class="link"
-onclick="showSignup()"
->
-Is-diiwaangeli
-</button>
-
+<button class="link" onclick="showSignup()">Is-diiwaangeli</button>
 </p>
 
 </div>
@@ -465,31 +141,15 @@ Is-diiwaangeli
 
 <h1>🔑 Forgot Password</h1>
 
-<p>
-Geli email-kaaga si aad u hesho link aad password-ka ku beddesho.
-</p>
+<p>Geli email-kaaga si aad u hesho link aad password-ka ku beddesho.</p>
 
-<input
-id="fe"
-type="email"
-placeholder="Email-kaaga"
->
+<input id="fe" type="email" placeholder="Email-kaaga">
 
-<button
-style="width:100%"
-onclick="forgot()"
->
-Dir Reset Link
-</button>
+<button style="width:100%" onclick="forgot()">Dir Reset Link</button>
 
 <p id="fm"></p>
 
-<button
-class="link"
-onclick="showLogin()"
->
-← Ku noqo Login
-</button>
+<button class="link" onclick="showLogin()">← Ku noqo Login</button>
 
 </div>
 
@@ -508,44 +168,19 @@ onclick="showLogin()"
 
 <h1>📝 Is-diiwaangeli</h1>
 
-<input
-id="sn"
-placeholder="Magaca oo buuxa"
->
+<input id="sn" placeholder="Magaca oo buuxa">
 
-<input
-id="se"
-type="email"
-placeholder="Email"
->
+<input id="se" type="email" placeholder="Email">
 
-<input
-id="sp"
-type="password"
-placeholder="Password"
->
+<input id="sp" type="password" placeholder="Password">
 
-<input
-id="sp2"
-type="password"
-placeholder="Ku celi password"
->
+<input id="sp2" type="password" placeholder="Ku celi password">
 
-<button
-style="width:100%"
-onclick="signup()"
->
-Samee Account
-</button>
+<button style="width:100%" onclick="signup()">Samee Account</button>
 
 <p id="sm"></p>
 
-<button
-class="link"
-onclick="showLogin()"
->
-← Gal
-</button>
+<button class="link" onclick="showLogin()">← Gal</button>
 
 </div>
 
@@ -563,9 +198,7 @@ onclick="showLogin()"
 
 <div class="hero">
 
-<h1>
-GUUL-WADAAG Official Community Portal
-</h1>
+<h1>GUUL-WADAAG Official Community Portal</h1>
 
 <p>
 Urur u taagan midnimo, horumarinta dhalinyarada,
@@ -579,26 +212,19 @@ ee Bali-Abane iyo deegaanka.
 
 <div class="card">
 
-<h2>
-✓ Secure Portal
-</h2>
+<h2>✓ Secure Portal</h2>
 
 <p>
-✓ Official Records
-<br>
-✓ Community Development
-<br>
+✓ Official Records<br>
+✓ Community Development<br>
 ✓ Transparent Management
 </p>
 
 </div>
 
-
 <div class="card">
 
-<h2>
-🏛️ Ku saabsan Guul-Wadaag
-</h2>
+<h2>🏛️ Ku saabsan Guul-Wadaag</h2>
 
 <p>
 Guul-Wadaag waa urur bulshada iyo dhalinyarada
@@ -623,168 +249,80 @@ Ku soo dhawoow,
 <span id="dname">Xubin</span> 👋
 </h1>
 
-<p>
-Dashboard-ka rasmiga ah ee Guul-Wadaag
-</p>
+<p>Dashboard-ka rasmiga ah ee Guul-Wadaag</p>
 
 </div>
-
 
 <div class="stats">
 
 <div class="stat">
-
 👥 Xubnaha
-
-<div
-class="num"
-id="mc"
->
-0
+<div class="num" id="mc">0</div>
 </div>
-
-</div>
-
 
 <div class="stat">
-
 🏗️ Mashaariic
-
-<div
-class="num"
-id="pc"
->
-0
+<div class="num" id="pc">0</div>
 </div>
-
-</div>
-
 
 <div class="stat">
-
 ✅ Dhammaystiran
-
-<div
-class="num"
-id="cc"
->
-0
+<div class="num" id="cc">0</div>
 </div>
 
-</div>
-
-
-<div
-class="stat"
-id="moneyCard"
->
-
+<div class="stat" id="moneyCard">
 💰 Hadhaaga Dollar
-
-<div
-class="num"
-id="tc"
->
-$0
-</div>
-
-<small id="tsls">
-0 SLSH
-</small>
-
+<div class="num" id="tc">$0</div>
+<small id="tsls">0 SLSH</small>
 </div>
 
 </div>
 
 
-<!-- MONEY SUMMARY -->
+<div id="dashboardMoney" class="card hidden" style="margin-top:18px">
 
-<div
-id="dashboardMoney"
-class="card hidden"
-style="margin-top:18px"
->
-
-<h2>
-💰 Xisaabta Ururka
-</h2>
+<h2>💰 Xisaabta Ururka</h2>
 
 <div class="grid">
 
 <div class="money-box">
 
-<h3>
-💵 Dollar (USD)
-</h3>
+<h3>💵 Dollar (USD)</h3>
 
 <p>
-La ururiyey:
-<br>
+La ururiyey:<br>
 <strong id="dashCollectedUSD">$0</strong>
 </p>
 
 <p>
-La bixiyey:
-<br>
+La bixiyey:<br>
 <strong id="dashPaidUSD">$0</strong>
 </p>
 
 <p>
-<strong>
-Hadhaaga:
-</strong>
-
-<br>
-
-<strong
-id="dashBalanceUSD"
-class="money-value"
->
-$0
-</strong>
-
+<strong>Hadhaaga:</strong><br>
+<strong id="dashBalanceUSD" class="money-value">$0</strong>
 </p>
 
 </div>
-
 
 <div class="money-box">
 
-<h3>
-💴 Shilin Somaliland (SLSH)
-</h3>
+<h3>💴 Shilin Somaliland (SLSH)</h3>
 
 <p>
-La ururiyey:
-<br>
-<strong id="dashCollectedSLSH">
-0 SLSH
-</strong>
+La ururiyey:<br>
+<strong id="dashCollectedSLSH">0 SLSH</strong>
 </p>
 
 <p>
-La bixiyey:
-<br>
-<strong id="dashPaidSLSH">
-0 SLSH
-</strong>
+La bixiyey:<br>
+<strong id="dashPaidSLSH">0 SLSH</strong>
 </p>
 
 <p>
-
-<strong>
-Hadhaaga:
-</strong>
-
-<br>
-
-<strong
-id="dashBalanceSLSH"
-class="money-value"
->
-0 SLSH
-</strong>
-
+<strong>Hadhaaga:</strong><br>
+<strong id="dashBalanceSLSH" class="money-value">0 SLSH</strong>
 </p>
 
 </div>
@@ -794,67 +332,44 @@ class="money-value"
 </div>
 
 
-<div
-class="grid"
-style="margin-top:18px"
->
+<div class="grid" style="margin-top:18px">
 
 <div class="card">
 
-<h2>
-📊 Xogta Guud
-</h2>
+<h2>📊 Xogta Guud</h2>
 
 <p>
 Dashboard-kan wuxuu soo bandhigayaa xogta ururka,
 xubnaha, mashaariicda iyo wararka.
 </p>
 
-<button onclick="page('members')">
-👥 Xubnaha
-</button>
+<button onclick="page('members')">👥 Xubnaha</button>
 
-<button onclick="page('projects')">
-🏗️ Mashaariic
-</button>
+<button onclick="page('projects')">🏗️ Mashaariic</button>
 
 </div>
 
 
 <div class="card">
 
-<h2>
-⚡ Hawlo Degdeg ah
-</h2>
+<h2>⚡ Hawlo Degdeg ah</h2>
 
 <div class="quick">
 
 <div onclick="page('members')">
-👥
-<br>
-Xubnaha
+👥<br>Xubnaha
 </div>
 
 <div onclick="page('projects')">
-🏗️
-<br>
-Mashaariic
+🏗️<br>Mashaariic
 </div>
 
 <div onclick="page('news')">
-📰
-<br>
-Warar
+📰<br>Warar
 </div>
 
-<div
-id="qpay"
-class="hidden"
-onclick="page('payments')"
->
-💰
-<br>
-Lacagaha
+<div id="qpay" class="hidden" onclick="page('payments')">
+💰<br>Lacagaha
 </div>
 
 </div>
@@ -866,47 +381,24 @@ Lacagaha
 
 <div class="card">
 
-<h2>
-📈 Horumarka Mashaariicda
-</h2>
+<h2>📈 Horumarka Mashaariicda</h2>
 
-<p>
-Qorshaysan:
-<b id="planned">0</b>
-</p>
+<p>Qorshaysan: <b id="planned">0</b></p>
 
 <div class="progress">
-<div
-id="pb1"
-class="bar"
-style="width:0%"
-></div>
+<div id="pb1" class="bar" style="width:0%"></div>
 </div>
 
-<p>
-Socda:
-<b id="ongoing">0</b>
-</p>
+<p>Socda: <b id="ongoing">0</b></p>
 
 <div class="progress">
-<div
-id="pb2"
-class="bar"
-style="width:0%"
-></div>
+<div id="pb2" class="bar" style="width:0%"></div>
 </div>
 
-<p>
-Dhammaystiran:
-<b id="done">0</b>
-</p>
+<p>Dhammaystiran: <b id="done">0</b></p>
 
 <div class="progress">
-<div
-id="pb3"
-class="bar"
-style="width:0%"
-></div>
+<div id="pb3" class="bar" style="width:0%"></div>
 </div>
 
 </div>
@@ -914,32 +406,17 @@ style="width:0%"
 
 <div class="card">
 
-<h2>
-👤 Xogtayda
-</h2>
+<h2>👤 Xogtayda</h2>
 
-<p>
-Magac:
-<b id="pn"></b>
-</p>
+<p>Magac: <b id="pn"></b></p>
 
-<p>
-Email:
-<b id="pe"></b>
-</p>
+<p>Email: <b id="pe"></b></p>
 
-<p>
-Xilka:
-<b id="pr">
-Xubin Caadi ah
-</b>
-</p>
+<p>Xilka: <b id="pr">Xubin Caadi ah</b></p>
 
 <p>
 Xaaladda:
-<span class="badge">
-Firfircoon
-</span>
+<span class="badge">Firfircoon</span>
 </p>
 
 </div>
@@ -951,126 +428,56 @@ Firfircoon
 
 <section id="members" class="hidden">
 
-<h1>
-👥 Xubnaha Guul-Wadaag
-</h1>
+<h1>👥 Xubnaha Guul-Wadaag</h1>
 
+<div id="memberForm" class="card hidden">
 
-<div
-id="memberForm"
-class="card hidden"
->
+<h3>➕ Ku dar / Wax ka beddel Xubin</h3>
 
-<h3>
-➕ Ku dar / Wax ka beddel Xubin
-</h3>
+<input id="mn" placeholder="Magaca">
 
-<input
-id="mn"
-placeholder="Magaca"
->
-
-<input
-id="mph"
-placeholder="Telefoon"
->
+<input id="mph" placeholder="Telefoon">
 
 <select id="mt">
 
-<option>
-Gudomiye
-</option>
-
-<option>
-Gud.kuxigeen
-</option>
-
-<option>
-Xeer-ilaaliye
-</option>
-
-<option>
-Qasnaji
-</option>
-
-<option>
-Xoghaye
-</option>
-
-<option>
-Afhayeen
-</option>
-
-<option>
-Xubin Gudi
-</option>
-
-<option>
-Xubin Caadi ah
-</option>
-
-<option>
-Xubin Firfircoon
-</option>
-
-<option>
-Taageere
-</option>
+<option>Gudomiye</option>
+<option>Gud.kuxigeen</option>
+<option>Xeer-ilaaliye</option>
+<option>Qasnaji</option>
+<option>Xoghaye</option>
+<option>Afhayeen</option>
+<option>Xubin Gudi</option>
+<option>Xubin Caadi ah</option>
+<option>Xubin Firfircoon</option>
+<option>Taageere</option>
 
 </select>
 
-<button onclick="saveMember()">
-💾 Kaydi
-</button>
+<button onclick="saveMember()">💾 Kaydi</button>
 
-<button
-class="cancel"
-onclick="cancelMember()"
->
-Jooji
-</button>
+<button class="cancel" onclick="cancelMember()">Jooji</button>
 
 </div>
 
 
 <div class="card">
 
-<input
-id="ms"
-placeholder="🔎 Raadi xubin..."
-oninput="renderMembers()"
->
+<input id="ms" placeholder="🔎 Raadi xubin..." oninput="renderMembers()">
 
 <div style="overflow-x:auto">
 
 <table>
 
 <thead>
-
 <tr>
-
-<th>
-Magaca
-</th>
-
-<th>
-Telefoon
-</th>
-
-<th>
-Xilka
-</th>
-
-<th>
-Ficil
-</th>
-
+<th>Magaca</th>
+<th>Telefoon</th>
+<th>Xilka</th>
+<th>Ficil</th>
 </tr>
-
 </thead>
 
-<tbody id="mtable">
-</tbody>
+<tbody id="mtable"></tbody>
 
 </table>
 
@@ -1085,70 +492,36 @@ Ficil
 
 <section id="projects" class="hidden">
 
-<h1>
-🏗️ Mashaariicda Guul-Wadaag
-</h1>
+<h1>🏗️ Mashaariicda Guul-Wadaag</h1>
 
+<div id="projectForm" class="card hidden">
 
-<div
-id="projectForm"
-class="card hidden"
->
+<input id="pname" placeholder="Magaca mashruuca">
 
-<input
-id="pname"
-placeholder="Magaca mashruuca"
->
+<textarea id="pdesc" placeholder="Sharaxaad"></textarea>
 
-<textarea
-id="pdesc"
-placeholder="Sharaxaad"
-></textarea>
-
-<input
-id="pbud"
-type="number"
-placeholder="Miisaaniyadda"
->
+<input id="pbud" type="number" placeholder="Miisaaniyadda">
 
 <select id="pstat">
 
-<option>
-Qorshaysan
-</option>
-
-<option>
-Socda
-</option>
-
-<option>
-Dhammaystiran
-</option>
+<option>Qorshaysan</option>
+<option>Socda</option>
+<option>Dhammaystiran</option>
 
 </select>
 
-<input
-id="pimg"
-placeholder="URL sawirka"
->
+<input id="pimg" placeholder="URL sawirka">
 
-<button onclick="saveProject()">
-💾 Kaydi
-</button>
+<button onclick="saveProject()">💾 Kaydi</button>
 
 </div>
 
 
 <div class="card">
 
-<input
-id="ps"
-placeholder="🔎 Raadi mashruuc..."
-oninput="renderProjects()"
->
+<input id="ps" placeholder="🔎 Raadi mashruuc..." oninput="renderProjects">
 
-<div id="plist">
-</div>
+<div id="plist"></div>
 
 </div>
 
@@ -1159,18 +532,11 @@ oninput="renderProjects()"
 
 <section id="payments" class="hidden">
 
-<h1>
-💰 Lacagaha Ururka
-</h1>
-
+<h1>💰 Lacagaha Ururka</h1>
 
 <div class="notice">
 
-<strong>
-Nidaamka lacagaha:
-</strong>
-
-<br>
+<strong>Nidaamka lacagaha:</strong><br>
 
 Dollar (USD) iyo Shilin Somaliland (SLSH)
 waa laba xisaabood oo kala madax-bannaan.
@@ -1183,268 +549,117 @@ lacagta SLSH-na lagama jari karo hadhaaga Dollar.
 </div>
 
 
-<!-- USD -->
-
 <div class="card currency-card">
 
-<h2>
-💵 Dollar (USD)
-</h2>
+<h2>💵 Dollar (USD)</h2>
 
 <div class="money-grid">
 
 <div class="money-box">
-
-<h3>
-La ururiyey
-</h3>
-
-<div
-class="money-value"
-id="colUSD"
->
-$0
+<h3>La ururiyey</h3>
+<div class="money-value" id="colUSD">$0</div>
 </div>
-
-</div>
-
 
 <div class="money-box">
-
-<h3>
-La bixiyey
-</h3>
-
-<div
-class="money-value"
-id="outUSD"
->
-$0
+<h3>La bixiyey</h3>
+<div class="money-value" id="outUSD">$0</div>
 </div>
-
-</div>
-
 
 <div class="money-box">
-
-<h3>
-Hadhaaga
-</h3>
-
-<div
-class="money-value balance-ok"
-id="balUSD"
->
-$0
+<h3>Hadhaaga</h3>
+<div class="money-value balance-ok" id="balUSD">$0</div>
 </div>
 
 </div>
 
 </div>
 
-</div>
-
-
-<!-- SLSH -->
 
 <div class="card currency-card">
 
-<h2>
-💴 Shilin Somaliland (SLSH)
-</h2>
+<h2>💴 Shilin Somaliland (SLSH)</h2>
 
 <div class="money-grid">
 
 <div class="money-box">
-
-<h3>
-La ururiyey
-</h3>
-
-<div
-class="money-value"
-id="colSLSH"
->
-0 SLSH
+<h3>La ururiyey</h3>
+<div class="money-value" id="colSLSH">0 SLSH</div>
 </div>
-
-</div>
-
 
 <div class="money-box">
-
-<h3>
-La bixiyey
-</h3>
-
-<div
-class="money-value"
-id="outSLSH"
->
-0 SLSH
+<h3>La bixiyey</h3>
+<div class="money-value" id="outSLSH">0 SLSH</div>
 </div>
-
-</div>
-
 
 <div class="money-box">
-
-<h3>
-Hadhaaga
-</h3>
-
-<div
-class="money-value balance-ok"
-id="balSLSH"
->
-0 SLSH
+<h3>Hadhaaga</h3>
+<div class="money-value balance-ok" id="balSLSH">0 SLSH</div>
 </div>
 
 </div>
 
 </div>
 
-</div>
-
-
-<!-- ADD PAYMENT -->
 
 <div class="card">
 
-<h3>
-➕ Diiwaangeli Lacag La Ururiyey
-</h3>
+<h3>➕ Diiwaangeli Lacag La Ururiyey</h3>
 
-<label>
-Magaca xubinta
-</label>
+<label>Magaca xubinta</label>
 
-<input
-id="payer"
-placeholder="Magaca xubinta"
->
+<input id="payer" placeholder="Magaca xubinta">
 
+<label>Lacagta</label>
 
-<label>
-Lacagta
-</label>
+<input id="amt" type="number" min="0" step="0.01" placeholder="Geli lacagta">
 
-<input
-id="amt"
-type="number"
-min="0"
-step="0.01"
-placeholder="Geli lacagta"
->
-
-
-<label>
-Nooca lacagta
-</label>
+<label>Nooca lacagta</label>
 
 <select id="paymentCurrency">
 
-<option value="USD">
-💵 Dollar (USD)
-</option>
-
-<option value="SLSH">
-💴 Shilin Somaliland (SLSH)
-</option>
+<option value="USD">💵 Dollar (USD)</option>
+<option value="SLSH">💴 Shilin Somaliland (SLSH)</option>
 
 </select>
 
-
-<label>
-Habka lacag bixinta
-</label>
+<label>Habka lacag bixinta</label>
 
 <select id="meth">
-
-<option>
-ZAAD
-</option>
-
-<option>
-eDahab
-</option>
-
-<option>
-Cash
-</option>
-
-<option>
-Bank
-</option>
-
+<option>ZAAD</option>
+<option>eDahab</option>
+<option>Cash</option>
+<option>Bank</option>
 </select>
 
+<input id="pnum" placeholder="Number-ka lacagta">
 
-<input
-id="pnum"
-placeholder="Number-ka lacagta"
->
+<input id="month" placeholder="Bisha">
 
-<input
-id="month"
-placeholder="Bisha"
->
-
-<button onclick="savePayment()">
-💳 Kaydi Lacagta
-</button>
+<button onclick="savePayment()">💳 Kaydi Lacagta</button>
 
 </div>
 
 
-<!-- PAYMENTS TABLE -->
-
 <div class="card">
 
-<input
-id="paysearch"
-placeholder="🔎 Raadi..."
-oninput="renderPayments()"
->
+<input id="paysearch" placeholder="🔎 Raadi..." oninput="renderPayments()">
 
 <div style="overflow-x:auto">
 
 <table>
 
 <thead>
-
 <tr>
-
-<th>
-Magaca
-</th>
-
-<th>
-Bisha
-</th>
-
-<th>
-Lacag
-</th>
-
-<th>
-Lacagta
-</th>
-
-<th>
-Habka
-</th>
-
-<th>
-Number
-</th>
-
+<th>Magaca</th>
+<th>Bisha</th>
+<th>Lacag</th>
+<th>Lacagta</th>
+<th>Habka</th>
+<th>Number</th>
 </tr>
-
 </thead>
 
-<tbody id="paytable">
-</tbody>
+<tbody id="paytable"></tbody>
 
 </table>
 
@@ -1459,16 +674,11 @@ Number
 
 <section id="disbursement" class="hidden">
 
-<h1>
-💸 Lacag La Bixiyey
-</h1>
-
+<h1>💸 Lacag La Bixiyey</h1>
 
 <div class="notice">
 
-<strong>
-Qasnajiga:
-</strong>
+<strong>Qasnajiga:</strong>
 
 Lacag-bixin kasta waxaa laga jarayaa
 hadhaaga lacagta la doortay.
@@ -1488,40 +698,23 @@ Qasnajigu ma bixin karo wax ka badan 500,000 SLSH.
 
 <div class="card">
 
-<h3>
-💰 Hadhaaga Hadda
-</h3>
+<h3>💰 Hadhaaga Hadda</h3>
 
 <div class="money-grid">
 
 <div class="money-box">
 
-<h3>
-💵 Dollar
-</h3>
+<h3>💵 Dollar</h3>
 
-<div
-id="disBalUSD"
-class="money-value"
->
-$0
-</div>
+<div id="disBalUSD" class="money-value">$0</div>
 
 </div>
-
 
 <div class="money-box">
 
-<h3>
-💴 SLSH
-</h3>
+<h3>💴 SLSH</h3>
 
-<div
-id="disBalSLSH"
-class="money-value"
->
-0 SLSH
-</div>
+<div id="disBalSLSH" class="money-value">0 SLSH</div>
 
 </div>
 
@@ -1529,133 +722,59 @@ class="money-value"
 
 </div>
 
-
-<!-- DISBURSEMENT FORM -->
 
 <div class="card">
 
-<h3>
-💸 Diiwaangeli Lacag-bixin
-</h3>
+<h3>💸 Diiwaangeli Lacag-bixin</h3>
 
+<label>Mashruuca</label>
 
-<label>
-Mashruuca
-</label>
+<input id="dp" placeholder="Magaca mashruuca">
 
-<input
-id="dp"
-placeholder="Magaca mashruuca"
->
+<label>Lacagta</label>
 
+<input id="da" type="number" min="0" step="0.01" placeholder="Geli lacagta">
 
-<label>
-Lacagta
-</label>
-
-<input
-id="da"
-type="number"
-min="0"
-step="0.01"
-placeholder="Geli lacagta"
->
-
-
-<label>
-Nooca lacagta
-</label>
+<label>Nooca lacagta</label>
 
 <select id="dCurrency">
 
-<option value="USD">
-💵 Dollar (USD)
-</option>
-
-<option value="SLSH">
-💴 Shilin Somaliland (SLSH)
-</option>
+<option value="USD">💵 Dollar (USD)</option>
+<option value="SLSH">💴 Shilin Somaliland (SLSH)</option>
 
 </select>
 
+<label>Qofka / Hay'adda lacagta loo dirayo</label>
 
-<label>
-Qofka / Hay'adda lacagta loo dirayo
-</label>
+<input id="dr" placeholder="Magaca qofka ama hay'adda">
 
-<input
-id="dr"
-placeholder="Magaca qofka ama hay'adda"
->
+<label>Sababta lacag-bixinta</label>
 
+<textarea id="dreason" placeholder="Sababta lacagta loo bixiyey"></textarea>
 
-<label>
-Sababta lacag-bixinta
-</label>
-
-<textarea
-id="dreason"
-placeholder="Sababta lacagta loo bixiyey"
-></textarea>
-
-
-<label>
-Habka lacag bixinta
-</label>
+<label>Habka lacag bixinta</label>
 
 <select id="dm">
-
-<option>
-ZAAD
-</option>
-
-<option>
-eDahab
-</option>
-
-<option>
-Cash
-</option>
-
-<option>
-Bank
-</option>
-
+<option>ZAAD</option>
+<option>eDahab</option>
+<option>Cash</option>
+<option>Bank</option>
 </select>
 
+<input id="dn" placeholder="Number-ka lacagta">
 
-<input
-id="dn"
-placeholder="Number-ka lacagta"
->
+<label>Taariikh</label>
 
-<label>
-Taariikh
-</label>
+<input id="dd" type="date">
 
-<input
-id="dd"
-type="date"
->
+<label>Waqti</label>
 
-<label>
-Waqti
-</label>
+<input id="dt" type="time">
 
-<input
-id="dt"
-type="time"
->
-
-
-<button onclick="saveDisbursement()">
-💸 Bixi oo Kaydi
-</button>
+<button onclick="saveDisbursement()">💸 Bixi oo Kaydi</button>
 
 </div>
 
-
-<!-- DISBURSEMENT TABLE -->
 
 <div class="card">
 
@@ -1666,45 +785,19 @@ type="time"
 <thead>
 
 <tr>
-
-<th>
-Mashruuc
-</th>
-
-<th>
-Lacag
-</th>
-
-<th>
-Lacagta
-</th>
-
-<th>
-Qaataha
-</th>
-
-<th>
-Sababta
-</th>
-
-<th>
-Habka
-</th>
-
-<th>
-Number
-</th>
-
-<th>
-Taariikh
-</th>
-
+<th>Mashruuc</th>
+<th>Lacag</th>
+<th>Lacagta</th>
+<th>Qaataha</th>
+<th>Sababta</th>
+<th>Habka</th>
+<th>Number</th>
+<th>Taariikh</th>
 </tr>
 
 </thead>
 
-<tbody id="distable">
-</tbody>
+<tbody id="distable"></tbody>
 
 </table>
 
@@ -1719,15 +812,11 @@ Taariikh
 
 <section id="news" class="hidden">
 
-<h1>
-📰 Wararka Guul-Wadaag
-</h1>
+<h1>📰 Wararka Guul-Wadaag</h1>
 
 <div class="card">
 
-<h2>
-Ku soo dhawoow Guul-Wadaag
-</h2>
+<h2>Ku soo dhawoow Guul-Wadaag</h2>
 
 <p>
 Halkan waxaad mustaqbalka ku arki doontaa
@@ -1767,20 +856,20 @@ waxbarashada iyo adeegga bulshada.
 
 <script>
 
-/* =========================
+/* =====================================================
    SUPABASE
-========================= */
+===================================================== */
 
-const URL =
+const SUPABASE_URL =
 "https://zbyrtasojwgrylcnqlhb.supabase.co";
 
-const KEY =
+const SUPABASE_KEY =
 "sb_publishable_D_PSqKecBwiESZwyLTxFiw_JMMTddAN";
 
 
-/* =========================
+/* =====================================================
    USERS
-========================= */
+===================================================== */
 
 const ADMIN =
 "Cabdiaadan2022@gmail.com".toLowerCase();
@@ -1789,36 +878,55 @@ const TREASURER =
 "wardudihazzan123@icloud.com".toLowerCase();
 
 
-/* =========================
+/* =====================================================
    VARIABLES
-========================= */
+===================================================== */
 
 let token = "";
-
+let refreshToken = "";
 let user = null;
 
 let members = [];
-
 let projects = [];
-
 let payments = [];
-
 let disbursements = [];
 
-
-/* =========================
-   CURRENCY
-========================= */
-
 const CURRENCY_USD = "USD";
-
 const CURRENCY_SLSH = "SLSH";
 
 
-/*
-   Haddii Currency uusan jirin
-   records-kii hore waxaa loo qaadanayaa USD.
-*/
+/* =====================================================
+   SHORT SELECTOR
+===================================================== */
+
+const $ = id =>
+document.getElementById(id);
+
+
+/* =====================================================
+   ESCAPE
+===================================================== */
+
+function esc(x){
+
+return String(x ?? "")
+.replace(
+/[&<>"']/g,
+m => ({
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
+"'":"&#039;"
+}[m])
+);
+
+}
+
+
+/* =====================================================
+   CURRENCY
+===================================================== */
 
 function currencyOf(x){
 
@@ -1826,7 +934,9 @@ if(
 x &&
 String(x.Currency || "").toUpperCase() === "SLSH"
 ){
+
 return CURRENCY_SLSH;
+
 }
 
 return CURRENCY_USD;
@@ -1834,9 +944,9 @@ return CURRENCY_USD;
 }
 
 
-/* =========================
-   MONEY FORMAT
-========================= */
+/* =====================================================
+   MONEY
+===================================================== */
 
 function money(amount,currency){
 
@@ -1860,28 +970,27 @@ maximumFractionDigits:2
 }
 
 
-/* =========================
-   CALCULATE TOTALS
-========================= */
+/* =====================================================
+   TOTALS
+===================================================== */
 
 function totals(currency){
 
 const collected =
 payments
-.filter(
-x => currencyOf(x) === currency
+.filter(x =>
+currencyOf(x) === currency
 )
 .reduce(
 (sum,x) =>
 sum + Number(x.Amount || 0),
 0
 );
-
 
 const paid =
 disbursements
-.filter(
-x => currencyOf(x) === currency
+.filter(x =>
+currencyOf(x) === currency
 )
 .reduce(
 (sum,x) =>
@@ -1889,13 +998,10 @@ sum + Number(x.Amount || 0),
 0
 );
 
-
 return {
 
-collected:collected,
-
-paid:paid,
-
+collected,
+paid,
 balance:collected-paid
 
 };
@@ -1903,209 +1009,44 @@ balance:collected-paid
 }
 
 
-/* =========================
-   RENDER MONEY
-========================= */
+/* =====================================================
+   ACCESS
+===================================================== */
 
-function renderMoney(){
+function admin(){
 
-if(!canMoney()) return;
-
-
-const usd =
-totals(CURRENCY_USD);
-
-const slsh =
-totals(CURRENCY_SLSH);
-
-
-/* PAYMENT PAGE */
-
-if(document.getElementById("colUSD")){
-
-colUSD.textContent =
-money(
-usd.collected,
-CURRENCY_USD
-);
-
-outUSD.textContent =
-money(
-usd.paid,
-CURRENCY_USD
-);
-
-balUSD.textContent =
-money(
-usd.balance,
-CURRENCY_USD
-);
-
-
-colSLSH.textContent =
-money(
-slsh.collected,
-CURRENCY_SLSH
-);
-
-outSLSH.textContent =
-money(
-slsh.paid,
-CURRENCY_SLSH
-);
-
-balSLSH.textContent =
-money(
-slsh.balance,
-CURRENCY_SLSH
-);
+return !!user &&
+String(user.email || "")
+.toLowerCase() === ADMIN;
 
 }
 
 
-/* DISBURSEMENT PAGE */
+function treasurer(){
 
-if(document.getElementById("disBalUSD")){
-
-disBalUSD.textContent =
-money(
-usd.balance,
-CURRENCY_USD
-);
-
-disBalSLSH.textContent =
-money(
-slsh.balance,
-CURRENCY_SLSH
-);
+return !!user &&
+String(user.email || "")
+.toLowerCase() === TREASURER;
 
 }
 
 
-/* DASHBOARD */
+function canMoney(){
 
-if(document.getElementById("tc")){
-
-tc.textContent =
-money(
-usd.balance,
-CURRENCY_USD
-);
-
-tsls.textContent =
-money(
-slsh.balance,
-CURRENCY_SLSH
-);
+return admin() || treasurer();
 
 }
 
 
-if(document.getElementById("dashCollectedUSD")){
+/* =====================================================
+   HEADERS
+===================================================== */
 
-dashCollectedUSD.textContent =
-money(
-usd.collected,
-CURRENCY_USD
-);
+function H(){
 
-dashPaidUSD.textContent =
-money(
-usd.paid,
-CURRENCY_USD
-);
+return {
 
-dashBalanceUSD.textContent =
-money(
-usd.balance,
-CURRENCY_USD
-);
-
-
-dashCollectedSLSH.textContent =
-money(
-slsh.collected,
-CURRENCY_SLSH
-);
-
-dashPaidSLSH.textContent =
-money(
-slsh.paid,
-CURRENCY_SLSH
-);
-
-dashBalanceSLSH.textContent =
-money(
-slsh.balance,
-CURRENCY_SLSH
-);
-
-}
-
-
-/* COLORS */
-
-if(document.getElementById("balUSD")){
-
-balUSD.className =
-"money-value " +
-(
-usd.balance < 0
-? "danger"
-: "balance-ok"
-);
-
-}
-
-
-if(document.getElementById("balSLSH")){
-
-balSLSH.className =
-"money-value " +
-(
-slsh.balance < 0
-? "danger"
-: "balance-ok"
-);
-
-}
-
-
-if(document.getElementById("disBalUSD")){
-
-disBalUSD.className =
-"money-value " +
-(
-usd.balance < 0
-? "danger"
-: "balance-ok"
-);
-
-}
-
-
-if(document.getElementById("disBalSLSH")){
-
-disBalSLSH.className =
-"money-value " +
-(
-slsh.balance < 0
-? "danger"
-: "balance-ok"
-);
-
-}
-
-}
-
-
-/* =========================
-   API HEADERS
-========================= */
-
-const H = () => ({
-
-"apikey":KEY,
+"apikey":SUPABASE_KEY,
 
 "Authorization":
 "Bearer " + token,
@@ -2116,52 +1057,755 @@ const H = () => ({
 "Prefer":
 "return=representation"
 
-});
+};
+
+}
 
 
-/* =========================
-   ACCESS
-========================= */
+/* =====================================================
+   LOGIN SCREENS
+===================================================== */
 
-const admin = () =>
-user &&
-String(
-user.email || ""
-).toLowerCase() === ADMIN;
+function showLogin(){
 
+$("login").classList.remove("hidden");
 
-const treasurer = () =>
-user &&
-String(
-user.email || ""
-).toLowerCase() === TREASURER;
+$("signup").classList.add("hidden");
+
+$("forgot").classList.add("hidden");
+
+}
 
 
-const canMoney = () =>
-admin() || treasurer();
+function showSignup(){
+
+$("login").classList.add("hidden");
+
+$("signup").classList.remove("hidden");
+
+$("forgot").classList.add("hidden");
+
+}
 
 
-/* =========================
-   ESCAPE HTML
-========================= */
+function showForgot(){
 
-const esc = x =>
-String(x ?? "")
-.replace(
-/[&<>"']/g,
-m => ({
-"&":"&amp;",
-"<":"&lt;",
-">":"&gt;",
-'"':"&quot;",
-"'":"&#039;"
-}[m])
+$("login").classList.add("hidden");
+
+$("signup").classList.add("hidden");
+
+$("forgot").classList.remove("hidden");
+
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+async function login(){
+
+const email =
+$("le").value.trim();
+
+const password =
+$("lp").value;
+
+$("lm").textContent = "";
+
+
+if(!email || !password){
+
+$("lm").textContent =
+"Fadlan geli email iyo password.";
+
+return;
+
+}
+
+
+$("lm").textContent =
+"⏳ Waa la hubinayaa...";
+
+
+try{
+
+const response =
+await fetch(
+SUPABASE_URL +
+"/auth/v1/token?grant_type=password",
+{
+
+method:"POST",
+
+headers:{
+"apikey":SUPABASE_KEY,
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+email:email,
+password:password
+})
+
+}
 );
 
 
-/* =========================
-   PAGE CONTROL
-========================= */
+const data =
+await response.json();
+
+
+if(!response.ok){
+
+console.error(
+"LOGIN ERROR",
+data
+);
+
+$("lm").textContent =
+data.error_description ||
+data.msg ||
+data.message ||
+"Email ama password waa khalad.";
+
+return;
+
+}
+
+
+token =
+data.access_token;
+
+refreshToken =
+data.refresh_token || "";
+
+user =
+data.user;
+
+
+localStorage.setItem(
+"gw_access_token",
+token
+);
+
+localStorage.setItem(
+"gw_refresh_token",
+refreshToken
+);
+
+localStorage.setItem(
+"gw_user",
+JSON.stringify(user)
+);
+
+
+await open();
+
+
+}catch(error){
+
+console.error(error);
+
+$("lm").textContent =
+"Login-ku wuu fashilmay. Internet-ka hubi.";
+
+}
+
+}
+
+
+/* =====================================================
+   RESTORE LOGIN
+===================================================== */
+
+async function restoreSession(){
+
+const savedToken =
+localStorage.getItem(
+"gw_access_token"
+);
+
+const savedRefresh =
+localStorage.getItem(
+"gw_refresh_token"
+);
+
+const savedUser =
+localStorage.getItem(
+"gw_user"
+);
+
+
+if(!savedToken){
+
+showLogin();
+
+return;
+
+}
+
+
+token =
+savedToken;
+
+refreshToken =
+savedRefresh || "";
+
+
+if(savedUser){
+
+try{
+
+user =
+JSON.parse(savedUser);
+
+}catch(e){
+
+user = null;
+
+}
+
+}
+
+
+try{
+
+const response =
+await fetch(
+SUPABASE_URL +
+"/auth/v1/user",
+{
+
+headers:{
+"apikey":SUPABASE_KEY,
+"Authorization":
+"Bearer " + token
+}
+
+}
+);
+
+
+if(response.ok){
+
+user =
+await response.json();
+
+localStorage.setItem(
+"gw_user",
+JSON.stringify(user)
+);
+
+await open();
+
+return;
+
+}
+
+
+/* refresh */
+
+if(refreshToken){
+
+const r =
+await fetch(
+SUPABASE_URL +
+"/auth/v1/token?grant_type=refresh_token",
+{
+
+method:"POST",
+
+headers:{
+"apikey":SUPABASE_KEY,
+"Content-Type":
+"application/json"
+},
+
+body:JSON.stringify({
+refresh_token:
+refreshToken
+})
+
+}
+);
+
+
+const d =
+await r.json();
+
+
+if(r.ok){
+
+token =
+d.access_token;
+
+refreshToken =
+d.refresh_token || refreshToken;
+
+user =
+d.user || user;
+
+
+localStorage.setItem(
+"gw_access_token",
+token
+);
+
+localStorage.setItem(
+"gw_refresh_token",
+refreshToken
+);
+
+if(user){
+
+localStorage.setItem(
+"gw_user",
+JSON.stringify(user)
+);
+
+}
+
+await open();
+
+return;
+
+}
+
+}
+
+}catch(error){
+
+console.error(
+"SESSION ERROR",
+error
+);
+
+}
+
+
+clearSession();
+
+showLogin();
+
+}
+
+
+/* =====================================================
+   CLEAR SESSION
+===================================================== */
+
+function clearSession(){
+
+token = "";
+
+refreshToken = "";
+
+user = null;
+
+localStorage.removeItem(
+"gw_access_token"
+);
+
+localStorage.removeItem(
+"gw_refresh_token"
+);
+
+localStorage.removeItem(
+"gw_user"
+);
+
+}
+
+
+/* =====================================================
+   SIGNUP
+===================================================== */
+
+async function signup(){
+
+const name =
+$("sn").value.trim();
+
+const email =
+$("se").value.trim();
+
+const password =
+$("sp").value;
+
+const password2 =
+$("sp2").value;
+
+
+$("sm").textContent = "";
+
+
+if(!name){
+
+$("sm").textContent =
+"Magaca geli.";
+
+return;
+
+}
+
+
+if(password.length < 6){
+
+$("sm").textContent =
+"Password-ku ugu yaraan 6 xaraf ha ahaado.";
+
+return;
+
+}
+
+
+if(password !== password2){
+
+$("sm").textContent =
+"Labada password isku mid ma aha.";
+
+return;
+
+}
+
+
+$("sm").textContent =
+"⏳ Account-ka waa la sameynayaa...";
+
+
+try{
+
+const response =
+await fetch(
+SUPABASE_URL +
+"/auth/v1/signup",
+{
+
+method:"POST",
+
+headers:{
+"apikey":SUPABASE_KEY,
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+email:email,
+
+password:password,
+
+data:{
+full_name:name
+}
+
+})
+
+}
+);
+
+
+const data =
+await response.json();
+
+
+if(!response.ok){
+
+$("sm").textContent =
+data.error_description ||
+data.msg ||
+data.message ||
+"Account-ka lama sameyn.";
+
+return;
+
+}
+
+
+if(data.access_token){
+
+token =
+data.access_token;
+
+refreshToken =
+data.refresh_token || "";
+
+user =
+data.user;
+
+
+localStorage.setItem(
+"gw_access_token",
+token
+);
+
+localStorage.setItem(
+"gw_refresh_token",
+refreshToken
+);
+
+localStorage.setItem(
+"gw_user",
+JSON.stringify(user)
+);
+
+await open();
+
+return;
+
+}
+
+
+$("sm").className =
+"success";
+
+$("sm").textContent =
+"✅ Account-ka waa la sameeyey. Email-ka xaqiiji kadibna Login samee.";
+
+}catch(error){
+
+console.error(error);
+
+$("sm").textContent =
+"Signup-ku wuu fashilmay.";
+
+}
+
+}
+
+
+/* =====================================================
+   FORGOT PASSWORD
+===================================================== */
+
+async function forgot(){
+
+const email =
+$("fe").value.trim();
+
+
+if(!email){
+
+$("fm").className =
+"error";
+
+$("fm").textContent =
+"Email-ka geli.";
+
+return;
+
+}
+
+
+try{
+
+const response =
+await fetch(
+SUPABASE_URL +
+"/auth/v1/recover",
+{
+
+method:"POST",
+
+headers:{
+"apikey":SUPABASE_KEY,
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+email:email
+})
+
+}
+);
+
+
+const data =
+await response.json();
+
+
+$("fm").className =
+response.ok
+?
+"success"
+:
+"error";
+
+
+$("fm").textContent =
+response.ok
+?
+"Reset link ayaa email-ka loo diray."
+:
+(
+data.error_description ||
+data.msg ||
+"Reset link lama dirin."
+);
+
+}catch(error){
+
+$("fm").className =
+"error";
+
+$("fm").textContent =
+"Internet-ka hubi.";
+
+}
+
+}
+
+
+/* =====================================================
+   OPEN APP
+===================================================== */
+
+async function open(){
+
+if(!user){
+
+showLogin();
+
+return;
+
+}
+
+
+$("login").classList.add("hidden");
+
+$("signup").classList.add("hidden");
+
+$("forgot").classList.add("hidden");
+
+$("header").classList.remove("hidden");
+
+$("app").classList.remove("hidden");
+
+
+const name =
+user?.user_metadata?.full_name ||
+user?.email ||
+"Xubin";
+
+
+$("dname").textContent =
+name;
+
+$("pn").textContent =
+name;
+
+$("pe").textContent =
+user.email || "";
+
+
+if(admin()){
+
+$("pr").textContent =
+"Guddoomiye / Admin";
+
+}else if(treasurer()){
+
+$("pr").textContent =
+"Qasnajiga";
+
+}else{
+
+$("pr").textContent =
+"Xubin Caadi ah";
+
+}
+
+
+if(canMoney()){
+
+$("payNav").classList.remove("hidden");
+
+$("disNav").classList.remove("hidden");
+
+$("qpay").classList.remove("hidden");
+
+$("moneyCard").classList.remove("hidden");
+
+$("dashboardMoney").classList.remove("hidden");
+
+}else{
+
+$("payNav").classList.add("hidden");
+
+$("disNav").classList.add("hidden");
+
+$("qpay").classList.add("hidden");
+
+$("moneyCard").classList.add("hidden");
+
+$("dashboardMoney").classList.add("hidden");
+
+}
+
+
+if(admin()){
+
+$("memberForm").classList.remove("hidden");
+
+$("projectForm").classList.remove("hidden");
+
+}else{
+
+$("memberForm").classList.add("hidden");
+
+$("projectForm").classList.add("hidden");
+
+}
+
+
+await load();
+
+page("dashboard");
+
+}
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+async function logout(){
+
+try{
+
+if(token){
+
+await fetch(
+SUPABASE_URL +
+"/auth/v1/logout",
+{
+
+method:"POST",
+
+headers:{
+"apikey":SUPABASE_KEY,
+"Authorization":
+"Bearer " + token
+}
+
+}
+);
+
+}
+
+}catch(e){}
+
+
+clearSession();
+
+location.reload();
+
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
 
 function hideAll(){
 
@@ -2174,430 +1818,84 @@ function hideAll(){
 "disbursement",
 "news"
 ]
-.forEach(
-x =>
-document
-.getElementById(x)
-.classList
-.add("hidden")
-);
+.forEach(id => {
+
+if($(id))
+$(id).classList.add("hidden");
+
+});
 
 }
 
 
-function page(x){
+function page(name){
 
 if(
 (
-x === "payments" ||
-x === "disbursement"
-) &&
+name === "payments" ||
+name === "disbursement"
+)
+&&
 !canMoney()
 ){
 
-return alert(
+alert(
 "🔒 Admin iyo Qasnajiga kaliya."
 );
 
+return;
+
 }
+
 
 hideAll();
 
-document
-.getElementById(x)
-.classList
-.remove("hidden");
+if($(name))
+$(name).classList.remove("hidden");
 
 
-if(x === "members")
+if(name === "members")
 renderMembers();
 
-if(x === "projects")
+if(name === "projects")
 renderProjects();
 
-if(x === "payments")
+if(name === "payments")
 renderPayments();
 
-if(x === "disbursement")
+if(name === "disbursement")
 renderDisbursements();
 
 }
 
 
-/* =========================
-   LOGIN SCREENS
-========================= */
-
-function showLogin(){
-
-login.classList.remove("hidden");
-
-signup.classList.add("hidden");
-
-forgot.classList.add("hidden");
-
-}
-
-
-function showSignup(){
-
-login.classList.add("hidden");
-
-signup.classList.remove("hidden");
-
-forgot.classList.add("hidden");
-
-}
-
-
-function showForgot(){
-
-login.classList.add("hidden");
-
-signup.classList.add("hidden");
-
-forgot.classList.remove("hidden");
-
-}
-
-
-/* =========================
-   LOGIN
-========================= */
-
-async function login(){
-
-try{
-
-let r =
-await fetch(
-URL +
-"/auth/v1/token?grant_type=password",
-{
-method:"POST",
-
-headers:{
-"apikey":KEY,
-"Content-Type":
-"application/json"
-},
-
-body:JSON.stringify({
-
-email:
-le.value.trim(),
-
-password:
-lp.value
-
-})
-
-}
-);
-
-
-let d =
-await r.json();
-
-
-if(!r.ok){
-
-lm.textContent =
-"Email ama password waa khalad.";
-
-return;
-
-}
-
-
-token =
-d.access_token;
-
-user =
-d.user;
-
-open();
-
-}catch(e){
-
-lm.textContent =
-"Login-ku wuu fashilmay. Internet-ka hubi.";
-
-}
-
-}
-
-
-/* =========================
-   SIGNUP
-========================= */
-
-async function signup(){
-
-if(
-sp.value.length < 6 ||
-sp.value !== sp2.value
-){
-
-sm.textContent =
-"Password-ka hubi (ugu yaraan 6 xaraf).";
-
-return;
-
-}
-
-
-let r =
-await fetch(
-URL + "/auth/v1/signup",
-{
-
-method:"POST",
-
-headers:{
-"apikey":KEY,
-"Content-Type":
-"application/json"
-},
-
-body:JSON.stringify({
-
-email:
-se.value.trim(),
-
-password:
-sp.value,
-
-data:{
-full_name:
-sn.value.trim()
-}
-
-})
-
-}
-);
-
-
-let d =
-await r.json();
-
-
-if(!r.ok){
-
-sm.textContent =
-d.msg ||
-d.error_description ||
-"Signup failed.";
-
-return;
-
-}
-
-
-sm.className =
-"success";
-
-sm.textContent =
-d.session
-?
-"Account waa la sameeyey."
-:
-"Account waa la sameeyey; email-ka xaqiiji kadib gal.";
-
-}
-
-
-/* =========================
-   FORGOT PASSWORD
-========================= */
-
-async function forgot(){
-
-let r =
-await fetch(
-URL + "/auth/v1/recover",
-{
-
-method:"POST",
-
-headers:{
-"apikey":KEY,
-"Content-Type":
-"application/json"
-},
-
-body:JSON.stringify({
-
-email:
-fe.value.trim()
-
-})
-
-}
-);
-
-
-fm.className =
-r.ok
-?
-"success"
-:
-"error";
-
-
-fm.textContent =
-r.ok
-?
-"Reset link ayaa email-ka loo diray."
-:
-"Email-ka lama aqbalin.";
-
-}
-
-
-/* =========================
-   OPEN APP
-========================= */
-
-async function open(){
-
-login.classList.add("hidden");
-
-signup.classList.add("hidden");
-
-forgot.classList.add("hidden");
-
-header.classList.remove("hidden");
-
-app.classList.remove("hidden");
-
-
-let name =
-user?.user_metadata?.full_name ||
-user?.email ||
-"Xubin";
-
-
-dname.textContent =
-name;
-
-pn.textContent =
-name;
-
-pe.textContent =
-user.email;
-
-
-pr.textContent =
-admin()
-?
-"Gudomiye / Admin"
-:
-treasurer()
-?
-"Qasnaji"
-:
-"Xubin Caadi ah";
-
-
-if(canMoney()){
-
-payNav.classList.remove("hidden");
-
-disNav.classList.remove("hidden");
-
-qpay.classList.remove("hidden");
-
-moneyCard.classList.remove("hidden");
-
-dashboardMoney.classList.remove("hidden");
-
-}else{
-
-payNav.classList.add("hidden");
-
-disNav.classList.add("hidden");
-
-qpay.classList.add("hidden");
-
-moneyCard.classList.add("hidden");
-
-dashboardMoney.classList.add("hidden");
-
-}
-
-
-if(admin()){
-
-memberForm.classList.remove("hidden");
-
-projectForm.classList.remove("hidden");
-
-}else{
-
-memberForm.classList.add("hidden");
-
-projectForm.classList.add("hidden");
-
-}
-
-
-await load();
-
-page("dashboard");
-
-}
-
-
-/* =========================
-   LOGOUT
-========================= */
-
-async function logout(){
-
-try{
-
-await fetch(
-URL + "/auth/v1/logout",
-{
-method:"POST",
-headers:H()
-}
-);
-
-}catch(e){}
-
-location.reload();
-
-}
-
-
-/* =========================
-   GET DATA
-========================= */
+/* =====================================================
+   GET
+===================================================== */
 
 async function get(table){
 
 try{
 
-let r =
+const response =
 await fetch(
-URL +
+SUPABASE_URL +
 "/rest/v1/" +
 table +
 "?select=*",
 {
+
 headers:H()
+
 }
 );
 
 
-if(!r.ok){
+if(!response.ok){
 
 console.error(
 table,
-await r.text()
+await response.text()
 );
 
 return [];
@@ -2605,11 +1903,11 @@ return [];
 }
 
 
-return await r.json();
+return await response.json();
 
-}catch(e){
+}catch(error){
 
-console.error(e);
+console.error(error);
 
 return [];
 
@@ -2618,9 +1916,9 @@ return [];
 }
 
 
-/* =========================
+/* =====================================================
    LOAD
-========================= */
+===================================================== */
 
 async function load(){
 
@@ -2648,74 +1946,60 @@ disbursements = [];
 }
 
 
-mc.textContent =
+$("mc").textContent =
 members.length;
 
-pc.textContent =
+$("pc").textContent =
 projects.length;
 
 
-let done =
+const completed =
 projects.filter(
 x =>
-x.Status ===
-"Dhammaystiran"
+x.Status === "Dhammaystiran"
 ).length;
 
 
-cc.textContent =
-done;
+$("cc").textContent =
+completed;
 
 
-if(canMoney()){
-
-renderMoney();
-
-}
-
-
-let a =
+const plannedCount =
 projects.filter(
 x =>
-x.Status ===
-"Qorshaysan"
+x.Status === "Qorshaysan"
 ).length;
 
 
-let b =
+const ongoingCount =
 projects.filter(
 x =>
-x.Status ===
-"Socda"
+x.Status === "Socda"
 ).length;
 
 
-planned.textContent =
-a;
+$("planned").textContent =
+plannedCount;
 
-ongoing.textContent =
-b;
+$("ongoing").textContent =
+ongoingCount;
 
-document.getElementById(
-"done"
-).textContent =
-done;
+$("done").textContent =
+completed;
 
 
-let total =
+const total =
 projects.length || 1;
 
 
-pb1.style.width =
-a / total * 100 + "%";
+$("pb1").style.width =
+(plannedCount / total * 100) + "%";
 
+$("pb2").style.width =
+(ongoingCount / total * 100) + "%";
 
-pb2.style.width =
-b / total * 100 + "%";
-
-
-pb3.style.width =
-done / total * 100 + "%";
+$("pb3").style.width =
+(completed / total * 100) + "%";
 
 
 renderMembers();
@@ -2726,44 +2010,176 @@ renderPayments();
 
 renderDisbursements();
 
+
+if(canMoney())
+renderMoney();
+
 }
 
 
-/* =========================
-   MEMBERS
-========================= */
+/* =====================================================
+   MONEY
+===================================================== */
+
+function renderMoney(){
+
+if(!canMoney())
+return;
+
+
+const usd =
+totals(CURRENCY_USD);
+
+const slsh =
+totals(CURRENCY_SLSH);
+
+
+if($("colUSD")){
+
+$("colUSD").textContent =
+money(
+usd.collected,
+CURRENCY_USD
+);
+
+$("outUSD").textContent =
+money(
+usd.paid,
+CURRENCY_USD
+);
+
+$("balUSD").textContent =
+money(
+usd.balance,
+CURRENCY_USD
+);
+
+$("colSLSH").textContent =
+money(
+slsh.collected,
+CURRENCY_SLSH
+);
+
+$("outSLSH").textContent =
+money(
+slsh.paid,
+CURRENCY_SLSH
+);
+
+$("balSLSH").textContent =
+money(
+slsh.balance,
+CURRENCY_SLSH
+);
+
+}
+
+
+if($("disBalUSD")){
+
+$("disBalUSD").textContent =
+money(
+usd.balance,
+CURRENCY_USD
+);
+
+$("disBalSLSH").textContent =
+money(
+slsh.balance,
+CURRENCY_SLSH
+);
+
+}
+
+
+$("tc").textContent =
+money(
+usd.balance,
+CURRENCY_USD
+);
+
+$("tsls").textContent =
+money(
+slsh.balance,
+CURRENCY_SLSH
+);
+
+
+if($("dashCollectedUSD")){
+
+$("dashCollectedUSD").textContent =
+money(
+usd.collected,
+CURRENCY_USD
+);
+
+$("dashPaidUSD").textContent =
+money(
+usd.paid,
+CURRENCY_USD
+);
+
+$("dashBalanceUSD").textContent =
+money(
+usd.balance,
+CURRENCY_USD
+);
+
+$("dashCollectedSLSH").textContent =
+money(
+slsh.collected,
+CURRENCY_SLSH
+);
+
+$("dashPaidSLSH").textContent =
+money(
+slsh.paid,
+CURRENCY_SLSH
+);
+
+$("dashBalanceSLSH").textContent =
+money(
+slsh.balance,
+CURRENCY_SLSH
+);
+
+}
+
+}
+
+
+/* =====================================================
+   MEMBER
+===================================================== */
 
 async function saveMember(){
 
 if(!admin())
-return alert(
-"Admin kaliya."
-);
+return alert("Admin kaliya.");
 
 
-let body = {
+const body = {
 
 Name:
-mn.value.trim(),
+$("mn").value.trim(),
 
 Phone:
-mph.value.trim(),
+$("mph").value.trim(),
 
 Type:
-mt.value
+$("mt").value
 
 };
 
 
 if(!body.Name)
-return alert(
-"Magaca geli."
-);
+return alert("Magaca geli.");
 
 
-let r =
+const response =
 await fetch(
-URL + "/rest/v1/Members",
+SUPABASE_URL +
+"/rest/v1/Members",
 {
 
 method:"POST",
@@ -2777,20 +2193,19 @@ JSON.stringify(body)
 );
 
 
-if(!r.ok){
+if(!response.ok){
 
-return alert(
+alert(
 "Xubinta lama kaydin.\n\n" +
-await r.text()
+await response.text()
 );
+
+return;
 
 }
 
 
-alert(
-"Xubinta waa la kaydiyey ✅"
-);
-
+alert("Xubinta waa la kaydiyey ✅");
 
 cancelMember();
 
@@ -2801,11 +2216,11 @@ await load();
 
 function cancelMember(){
 
-mn.value = "";
+$("mn").value = "";
 
-mph.value = "";
+$("mph").value = "";
 
-mt.value =
+$("mt").value =
 "Xubin Caadi ah";
 
 }
@@ -2813,14 +2228,19 @@ mt.value =
 
 function renderMembers(){
 
-let q =
-(ms.value || "")
+if(!$("mtable"))
+return;
+
+
+const q =
+(
+$("ms")?.value || ""
+)
 .toLowerCase();
 
 
-let a =
-members.filter(
-x =>
+const list =
+members.filter(x =>
 (
 String(x.Name) +
 " " +
@@ -2833,19 +2253,14 @@ String(x.Type)
 );
 
 
-mtable.innerHTML =
-a.map(
-x => `
+$("mtable").innerHTML =
+list.map(x => `
 
 <tr>
 
-<td>
-${esc(x.Name)}
-</td>
+<td>${esc(x.Name)}</td>
 
-<td>
-${esc(x.Phone)}
-</td>
+<td>${esc(x.Phone)}</td>
 
 <td>
 <span class="badge">
@@ -2874,9 +2289,7 @@ onclick="delMember(${x.id})"
 
 </tr>
 
-`
-)
-.join("");
+`).join("");
 
 }
 
@@ -2890,9 +2303,9 @@ if(
 return;
 
 
-let r =
+const response =
 await fetch(
-URL +
+SUPABASE_URL +
 "/rest/v1/Members?id=eq." +
 id,
 {
@@ -2905,10 +2318,15 @@ headers:H()
 );
 
 
-if(!r.ok)
-return alert(
-await r.text()
+if(!response.ok){
+
+alert(
+await response.text()
 );
+
+return;
+
+}
 
 
 await load();
@@ -2916,9 +2334,9 @@ await load();
 }
 
 
-/* =========================
-   PROJECTS
-========================= */
+/* =====================================================
+   PROJECT
+===================================================== */
 
 async function saveProject(){
 
@@ -2926,35 +2344,34 @@ if(!admin())
 return;
 
 
-let body = {
+const body = {
 
 Name:
-pname.value.trim(),
+$("pname").value.trim(),
 
 Description:
-pdesc.value.trim(),
+$("pdesc").value.trim(),
 
 Budget:
-Number(pbud.value) || 0,
+Number($("pbud").value) || 0,
 
 Status:
-pstat.value,
+$("pstat").value,
 
 Image:
-pimg.value.trim()
+$("pimg").value.trim()
 
 };
 
 
 if(!body.Name)
-return alert(
-"Magaca mashruuca geli."
-);
+return alert("Magaca mashruuca geli.");
 
 
-let r =
+const response =
 await fetch(
-URL + "/rest/v1/Project",
+SUPABASE_URL +
+"/rest/v1/Project",
 {
 
 method:"POST",
@@ -2968,29 +2385,27 @@ JSON.stringify(body)
 );
 
 
-if(!r.ok){
+if(!response.ok){
 
-return alert(
+alert(
 "Mashruuca lama kaydin:\n\n" +
-await r.text()
+await response.text()
 );
+
+return;
 
 }
 
 
-alert(
-"Mashruuca waa la kaydiyey ✅"
-);
+alert("Mashruuca waa la kaydiyey ✅");
 
+$("pname").value = "";
 
-pname.value = "";
+$("pdesc").value = "";
 
-pdesc.value = "";
+$("pbud").value = "";
 
-pbud.value = "";
-
-pimg.value = "";
-
+$("pimg").value = "";
 
 await load();
 
@@ -2999,15 +2414,20 @@ await load();
 
 function renderProjects(){
 
-let q =
-(ps.value || "")
+if(!$("plist"))
+return;
+
+
+const q =
+(
+$("ps")?.value || ""
+)
 .toLowerCase();
 
 
-plist.innerHTML =
+$("plist").innerHTML =
 projects
-.filter(
-x =>
+.filter(x =>
 (
 String(x.Name) +
 " " +
@@ -3018,8 +2438,7 @@ String(x.Status)
 .toLowerCase()
 .includes(q)
 )
-.map(
-x => `
+.map(x => `
 
 <div class="card">
 
@@ -3033,9 +2452,7 @@ ${esc(x.Description)}
 
 <p>
 
-<b>
-Xaalad:
-</b>
+<b>Xaalad:</b>
 
 <span class="badge">
 ${esc(x.Status)}
@@ -3045,11 +2462,11 @@ ${esc(x.Status)}
 
 <p>
 
-<b>
-Miisaaniyad:
-</b>
+<b>Miisaaniyad:</b>
 
-$${Number(x.Budget || 0).toLocaleString()}
+$${Number(
+x.Budget || 0
+).toLocaleString()}
 
 </p>
 
@@ -3071,7 +2488,6 @@ admin()
 ?
 `
 <br>
-
 <button
 class="delete"
 onclick="delProject(${x.id})"
@@ -3085,8 +2501,7 @@ onclick="delProject(${x.id})"
 
 </div>
 
-`
-)
+`)
 .join("");
 
 }
@@ -3101,9 +2516,9 @@ if(
 return;
 
 
-let r =
+const response =
 await fetch(
-URL +
+SUPABASE_URL +
 "/rest/v1/Project?id=eq." +
 id,
 {
@@ -3116,10 +2531,15 @@ headers:H()
 );
 
 
-if(!r.ok)
-return alert(
-await r.text()
+if(!response.ok){
+
+alert(
+await response.text()
 );
+
+return;
+
+}
 
 
 await load();
@@ -3127,9 +2547,9 @@ await load();
 }
 
 
-/* =========================
-   SAVE PAYMENT
-========================= */
+/* =====================================================
+   PAYMENT
+===================================================== */
 
 async function savePayment(){
 
@@ -3138,40 +2558,14 @@ return;
 
 
 const currency =
-document.getElementById(
-"paymentCurrency"
-).value;
-
+$("paymentCurrency").value;
 
 const amount =
-Number(amt.value);
-
-
-let body = {
-
-Member_Name:
-payer.value.trim(),
-
-Amount:
-amount,
-
-Currency:
-currency,
-
-Method:
-meth.value,
-
-Payment_Number:
-pnum.value.trim(),
-
-Month:
-month.value.trim()
-
-};
+Number($("amt").value);
 
 
 if(
-!body.Member_Name ||
+!$("payer").value.trim() ||
 amount <= 0
 ){
 
@@ -3182,9 +2576,33 @@ return alert(
 }
 
 
-let r =
+const body = {
+
+Member_Name:
+$("payer").value.trim(),
+
+Amount:
+amount,
+
+Currency:
+currency,
+
+Method:
+$("meth").value,
+
+Payment_Number:
+$("pnum").value.trim(),
+
+Month:
+$("month").value.trim()
+
+};
+
+
+const response =
 await fetch(
-URL + "/rest/v1/Payment",
+SUPABASE_URL +
+"/rest/v1/Payment",
 {
 
 method:"POST",
@@ -3198,55 +2616,52 @@ JSON.stringify(body)
 );
 
 
-if(!r.ok){
+if(!response.ok){
 
-return alert(
+alert(
 "Lacagta lama kaydin.\n\n" +
-"Hubi in Payment table-ka lagu daray column-ka Currency.\n\n" +
-await r.text()
+await response.text()
 );
+
+return;
 
 }
 
 
-alert(
-"Lacagta waa la kaydiyey ✅"
-);
+alert("Lacagta waa la kaydiyey ✅");
 
+$("payer").value = "";
 
-payer.value = "";
+$("amt").value = "";
 
-amt.value = "";
+$("pnum").value = "";
 
-pnum.value = "";
-
-month.value = "";
-
+$("month").value = "";
 
 await load();
 
 }
 
 
-/* =========================
-   RENDER PAYMENTS
-========================= */
-
 function renderPayments(){
 
 if(!canMoney())
 return;
 
+if(!$("paytable"))
+return;
 
-let q =
-(paysearch.value || "")
+
+const q =
+(
+$("paysearch")?.value || ""
+)
 .toLowerCase();
 
 
-paytable.innerHTML =
+$("paytable").innerHTML =
 payments
-.filter(
-x =>
+.filter(x =>
 (
 String(x.Member_Name) +
 " " +
@@ -3259,18 +2674,13 @@ currencyOf(x)
 .toLowerCase()
 .includes(q)
 )
-.map(
-x => `
+.map(x => `
 
 <tr>
 
-<td>
-${esc(x.Member_Name)}
-</td>
+<td>${esc(x.Member_Name)}</td>
 
-<td>
-${esc(x.Month)}
-</td>
+<td>${esc(x.Month)}</td>
 
 <td>
 ${money(
@@ -3295,29 +2705,23 @@ currencyOf(x) === "USD"
 
 </td>
 
-<td>
-${esc(x.Method)}
-</td>
+<td>${esc(x.Method)}</td>
 
-<td>
-${esc(x.Payment_Number)}
-</td>
+<td>${esc(x.Payment_Number)}</td>
 
 </tr>
 
-`
-)
+`)
 .join("");
-
 
 renderMoney();
 
 }
 
 
-/* =========================
-   SAVE DISBURSEMENT
-========================= */
+/* =====================================================
+   DISBURSEMENT
+===================================================== */
 
 async function saveDisbursement(){
 
@@ -3326,26 +2730,14 @@ return;
 
 
 const currency =
-document.getElementById(
-"dCurrency"
-).value;
-
+$("dCurrency").value;
 
 const amount =
-Number(da.value);
-
-
-/*
-   XISAABI HADHAAGA
-*/
+Number($("da").value);
 
 const balance =
 totals(currency);
 
-
-/*
-   LACAGTA HA KA BADNAAN HADHAAGA
-*/
 
 if(amount <= 0){
 
@@ -3383,14 +2775,10 @@ currency
 }
 
 
-/*
-   XOGTA LACAG-BIXINTA
-*/
-
-let body = {
+const body = {
 
 Project:
-dp.value.trim(),
+$("dp").value.trim(),
 
 Amount:
 amount,
@@ -3399,29 +2787,25 @@ Currency:
 currency,
 
 Recipient:
-dr.value.trim(),
+$("dr").value.trim(),
 
 Reason:
-dreason.value.trim(),
+$("dreason").value.trim(),
 
 Method:
-dm.value,
+$("dm").value,
 
 Payment_Number:
-dn.value.trim(),
+$("dn").value.trim(),
 
 Payment_Date:
-dd.value || null,
+$("dd").value || null,
 
 Payment_Time:
-dt.value || null
+$("dt").value || null
 
 };
 
-
-/*
-   QOFKA + SABABTA + MASHRUUCA
-*/
 
 if(
 !body.Project ||
@@ -3436,13 +2820,10 @@ return alert(
 }
 
 
-/*
-   SAVE
-*/
-
-let r =
+const response =
 await fetch(
-URL + "/rest/v1/Disbursement",
+SUPABASE_URL +
+"/rest/v1/Disbursement",
 {
 
 method:"POST",
@@ -3456,74 +2837,61 @@ JSON.stringify(body)
 );
 
 
-if(!r.ok){
+if(!response.ok){
 
-return alert(
-
+alert(
 "Lacag-bixinta lama kaydin.\n\n" +
-
-"Hubi in Disbursement table-ka lagu daray column-ka Currency.\n\n" +
-
-await r.text()
-
+await response.text()
 );
+
+return;
 
 }
 
 
 alert(
 "Lacag-bixinta waa la kaydiyey ✅\n\n" +
-
 "Hadhaaga " +
 currency +
 " waa laga jaray."
 );
 
 
-/*
-   CLEAR FORM
-*/
+$("dp").value = "";
 
-dp.value = "";
+$("da").value = "";
 
-da.value = "";
+$("dr").value = "";
 
-dr.value = "";
+$("dreason").value = "";
 
-dreason.value = "";
+$("dn").value = "";
 
-dn.value = "";
+$("dd").value = "";
 
-dd.value = "";
-
-dt.value = "";
-
+$("dt").value = "";
 
 await load();
 
 }
 
 
-/* =========================
-   RENDER DISBURSEMENTS
-========================= */
-
 function renderDisbursements(){
 
 if(!canMoney())
 return;
 
+if(!$("distable"))
+return;
 
-distable.innerHTML =
+
+$("distable").innerHTML =
 disbursements
-.map(
-x => `
+.map(x => `
 
 <tr>
 
-<td>
-${esc(x.Project)}
-</td>
+<td>${esc(x.Project)}</td>
 
 <td>
 ${money(
@@ -3548,45 +2916,42 @@ currencyOf(x) === "USD"
 
 </td>
 
-<td>
-${esc(x.Recipient)}
-</td>
+<td>${esc(x.Recipient)}</td>
 
-<td>
-${esc(x.Reason)}
-</td>
+<td>${esc(x.Reason)}</td>
 
-<td>
-${esc(x.Method)}
-</td>
+<td>${esc(x.Method)}</td>
 
-<td>
-${esc(x.Payment_Number)}
-</td>
+<td>${esc(x.Payment_Number)}</td>
 
-<td>
-${esc(x.Payment_Date)}
-</td>
+<td>${esc(x.Payment_Date)}</td>
 
 </tr>
 
-`
-)
+`)
 .join("");
-
 
 renderMoney();
 
 }
 
 
-/* =========================
+/* =====================================================
    START
-========================= */
+===================================================== */
+
+document.addEventListener(
+"DOMContentLoaded",
+async function(){
 
 showLogin();
+
+await restoreSession();
+
+}
+);
 
 </script>
 
 </body>
-</html>
+   </html>
