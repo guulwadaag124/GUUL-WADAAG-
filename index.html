@@ -269,7 +269,25 @@ ee bulshada Bali-Abane iyo guud ahaan deegaanka.
 <div class="stat"><div class="stat-icon">🏥</div><div class="stat-title">Caafimaad</div><div id="healthCount" class="stat-number">0</div></div>
 <div class="stat"><div class="stat-icon">🧹</div><div class="stat-title">Nadaafad</div><div id="cleaningCount" class="stat-number">0</div></div>
 <div class="stat"><div class="stat-icon">✅</div><div class="stat-title">Mashaariic Dhammaystiran</div><div id="completedProjects" class="stat-number">0</div></div>
-<div id="moneyStat" class="stat"><div class="stat-icon">💰</div><div class="stat-title">Lacag La Ururiyey</div><div id="totalPaid" class="stat-number">$0</div></div>
+
+<!-- MONEY STATS -->
+<div id="moneyStat" class="stat">
+<div class="stat-icon">💰</div>
+<div class="stat-title">Lacag La Ururiyey</div>
+<div id="totalPaid" class="stat-number">Sh.So 0</div>
+</div>
+
+<div id="moneySpentStat" class="stat">
+<div class="stat-icon">💸</div>
+<div class="stat-title">Lacag La Bixiyey</div>
+<div id="totalSpent" class="stat-number">Sh.So 0</div>
+</div>
+
+<div id="moneyBalanceStat" class="stat">
+<div class="stat-icon">💵</div>
+<div class="stat-title">Haraaga Lacagta</div>
+<div id="totalBalance" class="stat-number">Sh.So 0</div>
+</div>
 
 <div id="adminOnlineStat" class="stat hidden">
 <div class="stat-icon">🟢</div>
@@ -550,6 +568,26 @@ xogta ururka, xubnaha, mashaariicda iyo wararka.
 💰 <strong>Qasnajiga</strong><br><br>Waxaad diiwaangelin kartaa, Edit-gareyn kartaa, kana tirtiri kartaa lacagaha.
 </div>
 
+<div class="card">
+<h3>💰 Xogta Lacagaha</h3>
+
+<p>
+<strong>Lacag La Ururiyey:</strong>
+<span id="paymentTotalCollected">Sh.So 0</span>
+</p>
+
+<p>
+<strong>Lacag La Bixiyey:</strong>
+<span id="paymentTotalSpent">Sh.So 0</span>
+</p>
+
+<p>
+<strong>Haraaga:</strong>
+<span id="paymentTotalBalance">Sh.So 0</span>
+</p>
+
+</div>
+
 <div id="paymentForm" class="card hidden">
 <h3 id="paymentFormTitle">➕ Diiwaangeli Lacag</h3>
 <label>Xubinta</label>
@@ -593,6 +631,26 @@ xogta ururka, xubnaha, mashaariicda iyo wararka.
 <!-- DISBURSEMENT -->
 <section id="disbursement" class="hidden">
 <h1>💸 Lacag La Bixiyey</h1>
+
+<div class="card">
+<h3>💰 Xogta Lacag-bixinta</h3>
+
+<p>
+<strong>Lacag La Ururiyey:</strong>
+<span id="disbursementTotalCollected">Sh.So 0</span>
+</p>
+
+<p>
+<strong>Lacag La Bixiyey:</strong>
+<span id="disbursementTotalSpent">Sh.So 0</span>
+</p>
+
+<p>
+<strong>Haraaga:</strong>
+<span id="disbursementTotalBalance">Sh.So 0</span>
+</p>
+
+</div>
 
 <div id="disbursementAdminForm" class="card hidden">
 <h3 id="disbursementFormTitle">➕ Diiwaangeli Lacag La Bixiyey</h3>
@@ -771,7 +829,6 @@ function canSeeDisbursement(){
 return isAdmin()||isTreasurer();
 }
 
-/* MONEY PERMISSIONS */
 function canManagePayments(){
 return isAdmin()||isTreasurer();
 }
@@ -1587,11 +1644,15 @@ if(canSeePayments()){
 document.getElementById("paymentsNavBtn").classList.remove("hidden");
 document.getElementById("quickPayments").classList.remove("hidden");
 document.getElementById("moneyStat").classList.remove("hidden");
+document.getElementById("moneySpentStat").classList.remove("hidden");
+document.getElementById("moneyBalanceStat").classList.remove("hidden");
 document.getElementById("dashboardPaymentCard").classList.remove("hidden");
 }else{
 document.getElementById("paymentsNavBtn").classList.add("hidden");
 document.getElementById("quickPayments").classList.add("hidden");
 document.getElementById("moneyStat").classList.add("hidden");
+document.getElementById("moneySpentStat").classList.add("hidden");
+document.getElementById("moneyBalanceStat").classList.add("hidden");
 document.getElementById("dashboardPaymentCard").classList.add("hidden");
 }
 
@@ -2463,9 +2524,7 @@ isAdmin()
 
 
 /* =========================================================
-PAYMENTS - SAXIDDA QAYBTA LACAGTA
-ADMIN + QASNAJI:
-ADD + EDIT + DELETE
+PAYMENTS
 ========================================================= */
 
 async function savePayment(){
@@ -2617,7 +2676,7 @@ table.innerHTML=filtered.map(p=>`
 <td>${escapeHTML(p.Month||"")}</td>
 
 <td>
-<strong>$${Number(p.Amount||0).toLocaleString()}</strong>
+<strong>Sh.So ${Number(p.Amount||0).toLocaleString()}</strong>
 </td>
 
 <td>
@@ -2661,9 +2720,7 @@ onclick="deletePayment(${Number(p.id)})"
 
 
 /* =========================================================
-DISBURSEMENT - SAXIDDA QAYBTA LACAG-BIXINTA
-ADMIN + QASNAJI:
-ADD + EDIT + DELETE
+DISBURSEMENT
 ========================================================= */
 
 async function saveDisbursement(){
@@ -2826,7 +2883,7 @@ table.innerHTML=filtered.map(x=>`
 <td>${escapeHTML(x.Project||"")}</td>
 
 <td>
-<strong>$${Number(x.Amount||0).toLocaleString()}</strong>
+<strong>Sh.So ${Number(x.Amount||0).toLocaleString()}</strong>
 </td>
 
 <td>${escapeHTML(x.Recipient||"")}</td>
@@ -2938,12 +2995,43 @@ document.getElementById("cleaningCount").textContent=allCleaning.length;
 
 if(canSeePayments()){
 
-const total=allPayments.reduce(
+const totalCollected=allPayments.reduce(
 (sum,p)=>sum+Number(p.Amount||0),0
 );
 
-document.getElementById("totalPaid").textContent=
-"$"+total.toLocaleString();
+const totalSpent=allDisbursements.reduce(
+(sum,d)=>sum+Number(d.Amount||0),0
+);
+
+const balance=totalCollected-totalSpent;
+
+const collectedText=
+"Sh.So "+totalCollected.toLocaleString();
+
+const spentText=
+"Sh.So "+totalSpent.toLocaleString();
+
+const balanceText=
+"Sh.So "+balance.toLocaleString();
+
+document.getElementById("totalPaid").textContent=collectedText;
+
+document.getElementById("totalSpent").textContent=spentText;
+
+document.getElementById("totalBalance").textContent=balanceText;
+
+document.getElementById("paymentTotalCollected").textContent=collectedText;
+
+document.getElementById("paymentTotalSpent").textContent=spentText;
+
+document.getElementById("paymentTotalBalance").textContent=balanceText;
+
+document.getElementById("disbursementTotalCollected").textContent=collectedText;
+
+document.getElementById("disbursementTotalSpent").textContent=spentText;
+
+document.getElementById("disbursementTotalBalance").textContent=balanceText;
+
 }
 
 
