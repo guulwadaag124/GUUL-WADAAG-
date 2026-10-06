@@ -73,7 +73,7 @@ background:#f8faf9;
 .visitor-logout{font-size:12px;color:#777;margin-top:3px}
 
 /* =====================================================
-   EXCEL STYLE - LACAGAHA KELIYA
+   EXCEL STYLE - LACAGAHA
    ===================================================== */
 .payment-excel-wrap{
 overflow-x:auto;
@@ -175,6 +175,72 @@ color:#075b3a;
 border:1px solid #c8d8ce;
 font-size:11px;
 font-weight:700;
+}
+
+/* =====================================================
+   EXCEL STYLE - XUBNAHA
+   ===================================================== */
+.member-excel-wrap{
+overflow-x:auto;
+border:1px solid #aeb8b2;
+border-radius:8px;
+background:#fff;
+box-shadow:0 2px 8px #0001;
+}
+
+.member-excel{
+width:100%;
+min-width:650px;
+border-collapse:collapse;
+font-size:13px;
+}
+
+.member-excel th{
+background:#e7ece9;
+color:#17221d;
+font-weight:700;
+border:1px solid #aeb8b2;
+padding:9px 10px;
+white-space:nowrap;
+text-align:left;
+}
+
+.member-excel td{
+border:1px solid #d3dad5;
+padding:8px 10px;
+background:#fff;
+vertical-align:middle;
+}
+
+.member-excel tbody tr:nth-child(even) td{
+background:#f8faf9;
+}
+
+.member-excel tbody tr:hover td{
+background:#eef7f1;
+}
+
+.member-row-number{
+width:45px;
+text-align:center!important;
+background:#f0f3f1!important;
+font-weight:bold;
+color:#66756d;
+}
+
+.member-action{
+min-width:150px;
+}
+
+.member-excel .action{
+margin:0;
+gap:4px;
+}
+
+.member-excel .action button{
+padding:7px 9px;
+font-size:11px;
+border-radius:5px;
 }
 
 @media(max-width:900px){
@@ -513,15 +579,41 @@ xogta ururka, xubnaha, mashaariicda iyo wararka.
 <button id="memberCancelBtn" class="cancel-btn hidden" onclick="cancelMemberEdit()">Jooji</button>
 </div>
 
+<!-- XUBNAHA: EXCEL STYLE -->
 <div class="card">
-<input id="memberSearch" placeholder="🔎 Raadi xubin..." oninput="renderMembers()">
-<div style="overflow-x:auto">
-<table>
-<thead><tr><th>Magaca</th><th>Telefoon</th><th>Xilka</th><th>Ficil</th></tr></thead>
+
+<h3>
+📋 Diiwaanka Xubnaha
+<span class="excel-label">EXCEL STYLE</span>
+</h3>
+
+<input
+id="memberSearch"
+placeholder="🔎 Raadi magaca, telefoonka ama xilka..."
+oninput="renderMembers()"
+>
+
+<div class="member-excel-wrap">
+
+<table class="member-excel">
+
+<thead>
+<tr>
+<th>#</th>
+<th>Magaca</th>
+<th>Telefoon</th>
+<th>Xilka</th>
+<th>Ficil</th>
+</tr>
+</thead>
+
 <tbody id="memberTable"></tbody>
+
 </table>
+
 </div>
 </div>
+
 </section>
 
 <section id="projects" class="hidden">
@@ -619,7 +711,6 @@ xogta ururka, xubnaha, mashaariicda iyo wararka.
 </div>
 </section>
 
-<!-- PAYMENTS: KALIYA QAYBTAN AYAAN EXCEL STYLE KA DHIGAY -->
 <section id="payments" class="hidden">
 <h1>💰 Lacagaha Ururka</h1>
 
@@ -693,15 +784,12 @@ oninput="renderPayments()">
 <th>Ficil</th>
 </tr>
 </thead>
-
 <tbody id="paymentTable"></tbody>
-
 </table>
 </div>
 </div>
 </section>
 
-<!-- DISBURSEMENT -->
 <section id="disbursement" class="hidden">
 <h1>💸 Lacag La Bixiyey</h1>
 
@@ -1801,6 +1889,8 @@ document.getElementById("memberCancelBtn").classList.add("hidden");
 
 }
 
+/* KALIYA XUBNAHA AYAA HADA EXCEL STYLE AH */
+
 function renderMembers(){
 
 const table=document.getElementById("memberTable");
@@ -1814,22 +1904,56 @@ String(m.Phone||"").toLowerCase().includes(search)||
 String(m.Type||"").toLowerCase().includes(search)
 );
 
-table.innerHTML=filtered.map(member=>`
+table.innerHTML=filtered.map((member,index)=>`
 <tr>
-<td>${escapeHTML(member.Name||"")}</td>
-<td>${escapeHTML(member.Phone||"")}</td>
-<td><span class="badge">${escapeHTML(member.Type||"")}</span></td>
+
+<td class="member-row-number">
+${index+1}
+</td>
+
 <td>
+<strong>${escapeHTML(member.Name||"")}</strong>
+</td>
+
+<td>
+${escapeHTML(member.Phone||"")}
+</td>
+
+<td>
+<span class="badge">
+${escapeHTML(member.Type||"")}
+</span>
+</td>
+
+<td class="member-action">
+
 ${
 canManageMembers()
 ?`
 <div class="action">
-<button class="edit-btn" onclick='editMember(${JSON.stringify(member)})'>✏️ Edit</button>
-<button class="delete-btn" onclick="deleteMember(${Number(member.id)})">🗑️ Delete</button>
-</div>`
-:`<span class="badge">👁️ Arag</span>`
+
+<button
+class="edit-btn"
+onclick='editMember(${JSON.stringify(member)})'
+>
+✏️ Edit
+</button>
+
+<button
+class="delete-btn"
+onclick="deleteMember(${Number(member.id)})"
+>
+🗑️ Delete
+</button>
+
+</div>
+`
+:
+`<span class="badge">👁️ Arag</span>`
 }
+
 </td>
+
 </tr>
 `).join("");
 
@@ -2514,8 +2638,6 @@ document.getElementById("paymentCancelBtn").classList.add("hidden");
 
 }
 
-/* KALIYA RENDER-KA LACAGAHA AYAA EXCEL STYLE AH */
-
 function renderPayments(){
 
 if(!canSeePayments())return;
@@ -2534,63 +2656,26 @@ String(p.Payment_Number||"").toLowerCase().includes(search)
 
 table.innerHTML=filtered.map((p,index)=>`
 <tr>
-
 <td class="payment-row-number">${index+1}</td>
-
-<td>
-<strong>${escapeHTML(p.Member_Name||"")}</strong>
-</td>
-
-<td class="payment-month">
-${escapeHTML(p.Month||"")}
-</td>
-
-<td class="payment-amount">
-Sh.So ${Number(p.Amount||0).toLocaleString()}
-</td>
-
-<td>
-<span class="payment-method">
-${escapeHTML(p.Method||"")}
-</span>
-</td>
-
-<td class="payment-number">
-${escapeHTML(p.Payment_Number||"")}
-</td>
-
+<td><strong>${escapeHTML(p.Member_Name||"")}</strong></td>
+<td class="payment-month">${escapeHTML(p.Month||"")}</td>
+<td class="payment-amount">Sh.So ${Number(p.Amount||0).toLocaleString()}</td>
+<td><span class="payment-method">${escapeHTML(p.Method||"")}</span></td>
+<td class="payment-number">${escapeHTML(p.Payment_Number||"")}</td>
 <td class="payment-action">
-
 ${
 canManagePayments()
 ?`
 <div class="action">
-
-<button
-class="edit-btn"
-onclick='editPayment(${JSON.stringify(p)})'
->
-✏️ Edit
-</button>
-
-<button
-class="delete-btn"
-onclick="deletePayment(${Number(p.id)})"
->
-🗑️ Delete
-</button>
-
+<button class="edit-btn" onclick='editPayment(${JSON.stringify(p)})'>✏️ Edit</button>
+<button class="delete-btn" onclick="deletePayment(${Number(p.id)})">🗑️ Delete</button>
 </div>
 `
-:
-`<span class="payment-method">👁️ Arag</span>`
+:`<span class="payment-method">👁️ Arag</span>`
 }
-
 </td>
-
 </tr>
 `).join("");
-
 }
 
 
